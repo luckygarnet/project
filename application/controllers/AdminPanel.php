@@ -150,6 +150,7 @@ class AdminPanel extends CI_Controller {
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormAddSubIndicator', $data);
         $this->load->view('template/footer');
+        
     }
     /*
      * jirapa/AddSubindicator
@@ -167,11 +168,16 @@ class AdminPanel extends CI_Controller {
     }
     /*showEditsubindicator*/
      public function showFormEditsubindicator($subindicator_id){
-       // echo $subindicator_id;
         $this->load->model('subindicator');
+        $this->load->model('indicator');
         $query = $this->subindicator->getSubindicatorById($subindicator_id);
         $result = $query->result();
+        ///$id = $result[0]->indicator_id;
+       // $indicator = $this->indicator->getIndicatorById($id);
+       // $indicator = $indicator->result(); 
+       // $data['indicator']= $indicator[0];
         $data['subindicator'] = $result[0];
+      //  print_r($id);
         
         $this->load->view('template/header');
        // $this->load->view('template/navigationbar');
@@ -181,11 +187,13 @@ class AdminPanel extends CI_Controller {
     }
     public function Editsubindicator(){
        
-        $this->load->model('subindicator');
+        $this->load->model('subindicator');    
         $data['subindicator_id'] = $this->input->post('subindicator_id');
         $data['detail'] = $this->input->post('detail');
+      $data['indicator_id'] = $this->input->post('indicator_id');
         $number = $this->subindicator->editSubindicator($data);
-        redirect('/AdminPanel/ShowDetailIndicator');
+        redirect('/AdminPanel/ShowDetailIndicator/'.$data['indicator_id']);
+       // redirect('Admin/ShowDetailIndicator/80'.$data['indicator_id']);
     }
  /*showEditsubindicator*/
     /**
@@ -204,14 +212,15 @@ class AdminPanel extends CI_Controller {
         $comid = $result[0]->composition_id;
         $composition = $this->composition->getCompositionById($comid);
         $composition = $composition->result();
-
+        /*subindicator*/
         $subindicator = $this->subindicator->getAllSubindicatorByindicator($result[0]->indicator_id);
         $subindicator = $subindicator->result();
 
+        
         $data['composition'] = $composition[0];
         $data['indicator'] = $result[0];
         $data['subindicator'] = $subindicator;
-        
+       // print_r($data);
         $this->load->view('template/header');
        // $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
