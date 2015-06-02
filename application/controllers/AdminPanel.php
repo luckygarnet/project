@@ -87,8 +87,7 @@ class AdminPanel extends CI_Controller {
             show_404();
         }
         redirect('/AdminPanel/showCompositAll');
-    }
- 
+    } 
 
     /**
      * 

@@ -12,10 +12,10 @@
                 <div class="panel panel-default">                  
                     <div class="panel-heading">  <?php echo $composition->maintitle . " " . $composition->title; ?> </div>
                     <div class="panel-body">
-                        <form role="form" action="<?php echo base_url(); ?>AdminPanel/FormEditIndicator" method="post">
+                        <form role="form" action="<?php echo base_url(); ?>AdminPanel/EditIndicator" method="post">
                             <div class="form-group">
                                 <label>ใช้กับ</label>
-                                <select class="form-control" name = "used">
+                                <select class="form-control" name = "data_use">
                                     <option value="1" <?php if ($indicator->data_use=="1"){echo "selected";} ?> > ปีการศึกษา</option>
                                     <option value="2" <?php if ($indicator->data_use=="2"){echo "selected";} ?> > ปีงบประมาณ</option>
                                     <option value="3" <?php if ($indicator->data_use=="3"){echo "selected";} ?> > ปีปฏิทิน</option>                                    
