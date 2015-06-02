@@ -2,13 +2,13 @@
 <section id="main-content">
 <section class="wrapper">
 <div class="col-md-12 mt">
-<h3><i class="fa fa-angle-right"></i> องค์ประเมิน</h3>
+<h3><i class="fa fa-angle-right"></i> ฐานข้อมูลหัวข้องานประเมิน</h3>
 <div class="col-md-12">
 <div class="content-panel">
-<h4><i class="fa fa-angle-right"></i> องค์ประเมิน</h4>
+<h4><i class="fa fa-angle-right"></i> <?php echo $composition->maintitle . " " . $composition->title; ?> </h4>
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">                  
+                <div class="panel panel panel-warning">                  
                     <div class="panel-heading">  <?php echo $composition->maintitle . " " . $composition->title; ?> </div>
                     <div class="panel-body">
                         <div class="row">
@@ -79,6 +79,6 @@
         </div>
 </div>
 </div>
-</div>
-</section>
 
+</section>
+   

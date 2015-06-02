@@ -42,6 +42,12 @@ class indicator extends CI_Model {
         $num_inserts = $this->db->affected_rows();
         return $num_inserts;
     }
+    public function DeleteIndicator($indicator_id){
+        //$this->db->delete('indicator',array('indicator_id'=>$indicator_id));
+       $this->db->where('indicator_id',$indicator_id);
+       $this->db->delete('indicator');
+       return $this->db->affected_rows();
+    }
 
 }
 

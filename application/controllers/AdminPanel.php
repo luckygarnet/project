@@ -172,12 +172,11 @@ class AdminPanel extends CI_Controller {
         $this->load->model('indicator');
         $query = $this->subindicator->getSubindicatorById($subindicator_id);
         $result = $query->result();
-        ///$id = $result[0]->indicator_id;
-       // $indicator = $this->indicator->getIndicatorById($id);
-       // $indicator = $indicator->result(); 
-       // $data['indicator']= $indicator[0];
+        $id = $result[0]->indicator_id;
+        $indicator = $this->indicator->getIndicatorById($id);
+        $indicator = $indicator->result(); 
+        $data['indicator']= $indicator[0];
         $data['subindicator'] = $result[0];
-      //  print_r($id);
         
         $this->load->view('template/header');
        // $this->load->view('template/navigationbar');
@@ -186,14 +185,13 @@ class AdminPanel extends CI_Controller {
         $this->load->view('template/footer');
     }
     public function Editsubindicator(){
-       
         $this->load->model('subindicator');    
         $data['subindicator_id'] = $this->input->post('subindicator_id');
         $data['detail'] = $this->input->post('detail');
-      $data['indicator_id'] = $this->input->post('indicator_id');
+        $data['indicator_id'] = $this->input->post('indicator_id');
         $number = $this->subindicator->editSubindicator($data);
         redirect('/AdminPanel/ShowDetailIndicator/'.$data['indicator_id']);
-       // redirect('Admin/ShowDetailIndicator/80'.$data['indicator_id']);
+
     }
  /*showEditsubindicator*/
     /**
@@ -220,6 +218,7 @@ class AdminPanel extends CI_Controller {
         $data['composition'] = $composition[0];
         $data['indicator'] = $result[0];
         $data['subindicator'] = $subindicator;
+        $data['indicator_id']=$indicator_id;
        // print_r($data);
         $this->load->view('template/header');
        // $this->load->view('template/navigationbar');
@@ -227,8 +226,16 @@ class AdminPanel extends CI_Controller {
         $this->load->view('Admin/ShowDetailIndicator', $data);
         $this->load->view('template/footer');
     }
-
-    /**
+    public function DeleteIndicator($indicator_id) {
+        $this->load->model('indicator');
+        $this->indicator->DeleteIndicator($indicator_id);
+        /*$this->load->model('indicator');
+        $indicator_id = $this->input->post('indicator_id');
+        $this->indicator->DeleteIndicator($indicator_id);*/
+        redirect('/AdminPanel/showCompositAll');
+        
+    }
+    /**$indicator_id
      * For Update Composition 
      * @author  Pisit Nakjai 
      */

@@ -2,15 +2,15 @@
                     <section id="main-content">
                         <section class="wrapper">                            
                             <div class="col-md-12 mt">
-                                <h3><i class="fa fa-angle-right"></i> องค์ประเมิน</h3>
+                                <h3><i class="fa fa-angle-right"></i> ฐานข้อมูลการประเมิน</h3>
                                     <div class="col-md-12">
                                         <div class="content-panel">
-	                  	  	  <h4><i class="fa fa-angle-right"></i> องค์ประเมิน</h4>
+	                  	  	  <h4><i class="fa fa-angle-right"></i> หัวข้อองค์ประเมิน</h4>
 	                  	  	  <hr>                                           
                                            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-10 col-md-offset-1">
 
-                    <div class="panel panel-default">
+                    <div class="panel panel panel-warning">
                         <div class="panel-heading">
                             <h4 class="panel-title">หัวข้อองค์ประเมิน
                                 <span class="pull-right" data-toggle="modal" data-target="#myModal">
@@ -28,7 +28,7 @@
                                     $indicator = $value[1];
                                     ?>
 
-                                    <div class="panel panel-default">
+                                    <div class="panel panel panel-warning">
 
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
@@ -49,7 +49,7 @@
                                         </div>
 
                                         <div style="height: 0px;" aria-expanded="false" id="<?php echo $composit->id ?>" class="panel-collapse collapse">
-                                            <div class="panel-body">
+                                            <div class="panel panel panel-warning">
 
                                                 <?php
                                                 foreach ($indicator as &$value_in) {

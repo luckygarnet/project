@@ -24,7 +24,7 @@
                                             $i++;
                                         ?>
                               <tr>
-                                  <td><a href="basic_table.html#"><?php echo $i;?></a></td>
+                                  <td><?php echo $i;?></a></td>
                                   <td class="hidden-phone"><?php echo $value->username; ?></td>
                                   <td><?php echo $value->password; ?> </td>
                                   <td><?php if($value->status=="1"){ echo "ผู้ดูแลระบบ";}elseif ($value->status=="2") {echo "ผู้ประเมิน";} else{ echo "กรรมการผู้ตรวจการประเมิน";}?></td>

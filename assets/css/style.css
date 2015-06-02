@@ -26,6 +26,14 @@ ul li {
 a, a:hover, a:focus {
     text-decoration: none;
     outline: none;
+    /* color: #ff9900;*/
+}
+a {
+    color: #ff9900;
+    text-decoration: none;
+}
+a {
+    background: transparent none repeat scroll 0 0;
 }
 ::selection {
 

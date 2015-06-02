@@ -1,4 +1,4 @@
-
+<?php echo $subindicator->indicator_id;?>
 <aside></aside>
 <section id="main-content">
 <section class="wrapper">
@@ -19,13 +19,16 @@
                                 <div id="txtEditor"></div>
 
                             </div>
-                            
+                            <!--form hidden-->
+                               <input type="hidden" name="indicator_id" value ="<?php echo $indicator->indicator_id; ?>">
+                               <input type="hidden" name="subindicator_id" value ="<?php echo $subindicator->subindicator_id; ?>"> 
+                               
                             <button type="submit" class="btn btn-default right">Submit Button</button>
                             <button type="reset" class="btn btn-default right">Reset Button</button>
                         </form>
                     </div>
                    
-                   
+                
          
                 </div>
             </div>
