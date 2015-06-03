@@ -268,6 +268,7 @@ class AdminPanel extends CI_Controller {
         $this->load->model('user');
         $data['username'] = $this->input->post('username');
         $data['password'] = md5($this->input->post('password'));
+        $data['agency'] = ($this->input->post('agency'));
         $data['status'] = $this->input->post('status');
         $number = $this->user->addUser($data);
         
@@ -302,7 +303,8 @@ class AdminPanel extends CI_Controller {
     public function EditUser(){
         $this->load->model('user');
         $data['username'] = $this->input->post('username');
-        $data['password'] = $this->input->post('password');
+        $data['password'] = md5($this->input->post('password'));
+         $data['agency'] = $this->input->post('agency');
         $data['status'] = $this->input->post('status');
         
         $number = $this->user->editUser($data);
@@ -316,10 +318,25 @@ class AdminPanel extends CI_Controller {
     }
 
     public function login() {
-        $this->load->view('template/header');
-        $this->load->view('login');
-        $this->load->view('template/footer');
+        $this->load->view('login/header');
+        $this->load->view('login/login');
+        $this->load->view('login/footer');
     }
+    
+   /* public function checkLogin(){
+        $this->load->model('user');
+        $data['user_id'] = $this->input->post('user_id');
+        $data['username'] = $this->input->post('username');
+        $data['password'] = $this->input->post('password');
+        $query=  $this->user->login($data);
+        if($query){
+           
+        }  elseif () {
+            
+        }  elseif () {
+            
+        }
+    }*/
 
 }
 

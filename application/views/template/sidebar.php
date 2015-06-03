@@ -32,9 +32,8 @@
                       <span class="dcjq-icon"></span></a>
                       <ul class="sub" style="display: none;">
                           <li><a href="<?php echo base_url('index.php/AdminPanel/showUser');?>">ผู้ใช้งานทั้งหมด</a></li>
-                          <li><a href="<?php echo base_url('index.php/AdminPanel/showFormAddUser');?>">เพิ่มผู้ดูแลระบบ</a></li>
-                          <li><a href="buttons.html">เพิ่มผู้ประเมิน</a></li>
-                          <li><a href="panels.html">เพิ่มคณะกรรมการ</a></li>
+                          <li><a href="<?php echo base_url('index.php/AdminPanel/showFormAddUser');?>">เพิ่มผู้ใช้งาน</a></li>
+                         
                       </ul>
                   </li>
 

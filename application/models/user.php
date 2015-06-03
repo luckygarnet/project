@@ -25,7 +25,15 @@ class user extends CI_Model {
         $num_updates = $this->db->affected_rows();
         return $num_updates;
     }
-   /* public function addUniversityUser($data){
+    public function login(){
+        
+    }
+   /* public function getStatus(){
+      //  $this->db->select('status');
+      // $this->db->from($this->);
+      $this->db->where()
+    }*/
+    /* public function addUniversityUser($data){
          $this->db->insert('university_user', $data);
     }
     public function addFacultyUser($data){
@@ -42,6 +50,7 @@ class user extends CI_Model {
             return $query;
         
     }*/
+    
 }
 
 ?>

@@ -25,12 +25,24 @@
                                     <input class="form-control" name = "password" type="password">
                                 </div>
                                 <div class="form-group">
+                                       <label>หน่วยงานภายในมหาวิทยาลัย</label>
+                                           <select class="form-control" name = "agency" >
+                                               <option value=" "> เลือกหน่วยงาน</option>
+                                               <option value="1"> สำนักงานอธิการบดี</option>
+                                               <option value="2"> กองกลาง</option>
+                                               <option value="3"> กองนโยบาลและแผน</option>
+                                               <option value="4"> กองบริการการศึกษา</option>
+                                               <option value="5"> กองบริหารงานบุคคล</option>
+                                               <option value="6"> กองพัฒนานักศึกษา</option>
+                                               <option value="7"> กองศิลปวัฒนธรรม</option>
+                                           </select>
+                                    </div>
+                                <div class="form-group">
                                        <label>สถานะ</label>
                                            <select class="form-control" name = "status" >
-                                               <option value="1"> ผู้ดูแลระบบ</option>
-                                               <option value="2"> ผู้ประเมิน</option>
-                                               <option value="3"> กรรมการผู้ตรวจการประเมิน</option>
-                                              
+                                               <option value=" "> เลือกสถานะ</option>
+                                               <option value="1"> ใช้งานปกติ</option>
+                                               <option value="2"> ถูกระงับการใช้งาน</option>
                                            </select>
                                     </div>
                                     
