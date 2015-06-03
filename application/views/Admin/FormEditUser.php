@@ -7,7 +7,7 @@
      
                   <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">                  
-                    <div class="panel-heading">  เพิ่มผู้ใช้งาน </div>
+                    <div class="panel-heading">  แก้ไขผู้ใช้งาน </div>
                     <div class="panel-body">
                          <form role="form" action="<?php echo base_url(); ?>AdminPanel/EditUser" method="post">
                         <div class="row">
@@ -17,10 +17,7 @@
                                     <label>Username :</label>
                                     <input class="form-control" name = "username" value="<?php echo $user->username; ?>">
                                 </div>
-                                <div class="form-group">
-                                    <label>Password :</label>
-                                    <input class="form-control" name = "password" type="password" value="<?php echo $user->password; ?>">
-                                </div>
+                                
                                 <div class="form-group">
                                        <label>หน่วยงานภายในมหาวิทยาลัย</label>
                                            <select class="form-control" name = "agency" >
