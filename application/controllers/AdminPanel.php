@@ -231,7 +231,8 @@ class AdminPanel extends CI_Controller {
         /*$this->load->model('indicator');
         $indicator_id = $this->input->post('indicator_id');
         $this->indicator->DeleteIndicator($indicator_id);*/
-        redirect('/AdminPanel/showCompositAll');
+       // redirect('/AdminPanel/showCompositAll');
+        echo 'ture';
         
     }
     /**$indicator_id

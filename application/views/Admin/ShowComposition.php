@@ -242,15 +242,16 @@
             $('#titleEdit').val(title);
         }
         function confimdelete(id) {
-            var id = confirm("Are you Sure?");
-            if (id == true) {
-                $.post("demo_test_post.asp",
-                        ,
-                function (data, status) {
-                    alert("Data: " + data + "\nStatus: " + status);
-                });
-            }
+            var d = confirm("Are you Sure?");
+            if (d == true) {
+                $.post("<?php echo base_url('AdminPanel/DeleteIndicator/'); ?>/" + id,
+                        function (data) {
+                           window.location="<?php echo base_url('AdminPanel/showCompositAll/'); ?>";
+                        });
 
+            }
         }
+
+
     </script>
 
