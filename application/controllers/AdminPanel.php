@@ -310,6 +310,12 @@ class AdminPanel extends CI_Controller {
         $number = $this->user->editUser($data);
         redirect('/AdminPanel/showUser');
     }
+    public function DeleteUser($user_id){
+        $this->load->model('user');
+        $this->user->DeleteUser($user_id);
+        echo 'ture';
+    }
+
     public function test(){
        
      

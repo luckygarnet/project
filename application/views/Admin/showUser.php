@@ -43,6 +43,38 @@
                                             echo "กองพัฒนานักศึกษา";
                                         }elseif ($value->agency == "7") {
                                             echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "8") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "9") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "10") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "11") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "12") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "13") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "14") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "15") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "16") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "17") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "18") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "7") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "7") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "7") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "7") {
+                                            echo "กองศิลปวัฒนธรรม";
+                                        }elseif ($value->agency == "7") {
+                                            echo "กองศิลปวัฒนธรรม";
                                         }
                                         ?></td>
                                     <td><?php if ($value->status == "1") {
@@ -75,5 +107,15 @@
             </div>
         </div>
     </section>
+    <script>
+    function confimuser(id) {
+            var userid = confirm("Are you Sure?");
+            if (userid == true) {
+                $.post("<?php echo base_url('AdminPanel/DeleteUser/'); ?>/" + id,
+                        function (data) {
+                           window.location="<?php echo base_url('AdminPanel/showUser/'); ?>";
+                        });
 
-    <script type="text/javascript" src="<?php echo base_url("assets/ckeditor/ckeditor.js"); ?>"></script>
+            }
+        }
+    </script>

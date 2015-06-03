@@ -32,6 +32,21 @@
                                                <option value="5" <?php if ($user->agency=="5"){echo "selected";} ?>> กองบริหารงานบุคคล</option>
                                                <option value="6" <?php if ($user->agency=="6"){echo "selected";} ?>> กองพัฒนานักศึกษา</option>
                                                <option value="7" <?php if ($user->agency=="7"){echo "selected";} ?>> กองศิลปวัฒนธรรม</option>
+                                               <option value="8" <?php if ($user->agency=="8"){echo "selected";} ?>> สำนักงานคณะกรรมการมาตรฐานคุณภาพการศึกษา</option>
+                                               <option value="9" <?php if ($user->agency=="9"){echo "selected";} ?>> สำนักวิทยบริการและเทคโนโลยีสารสนเทศ</option>
+                                               <option value="10" <?php if ($user->agency=="10"){echo "selected";} ?>> สถาบันวิจัยและพัฒนา</option>
+                                               <option value="11" <?php if ($user->agency=="11"){echo "selected";} ?>> สถาบันอาเซียนศึกษา</option>
+                                               <option value="12" <?php if ($user->agency=="12"){echo "selected";} ?>> ศูนย์คอมพิวเตอร์</option>
+                                               <option value="13" <?php if ($user->agency=="13"){echo "selected";} ?>> ศูนย์วิทยาศาสตร์และเทคโนโลยี</option>
+                                               <option value="14" <?php if ($user->agency=="14"){echo "selected";} ?>> ศูนย์สหกิจศึกษา</option>
+                                               <option value="15" <?php if ($user->agency=="15"){echo "selected";} ?>> ศูนย์บรูณาการงานวิจัยและวิชาการเพื่อรับใช้สังคม</option>
+                                               <option value="16" <?php if ($user->agency=="16"){echo "selected";} ?>> หน่วยบ่มเพาะวิสาหกิจ URUBI</option>
+                                               <option value="17" <?php if ($user->agency=="17"){echo "selected";} ?>> สวนพฤษศาสตร์โรงเรียน</option>
+                                               <option value="18" <?php if ($user->agency=="18"){echo "selected";} ?>> สำนักงานกิจการพิเศษ</option>
+                                               <option value="19" <?php if ($user->agency=="19"){echo "selected";} ?>> โรงแรมเรือนต้นสัก</option>
+                                               <option value="20" <?php if ($user->agency=="20"){echo "selected";} ?>> สระว่ายน้ำเฉลิมราชภัฏ</option>
+                                               <option value="21" <?php if ($user->agency=="21"){echo "selected";} ?>> อุทยานวิทยาศาสตร์ภาคเหนือ มหาวิทยาลัยราชภัฏอุตรดิตถ์</option>
+                                               <option value="22" <?php if ($user->agency=="22"){echo "selected";} ?>> ลำรางทุ่งกะโล่</option>
                                            </select>
                                     </div>
                                 <div class="form-group">

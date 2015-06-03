@@ -35,6 +35,21 @@
                                                <option value="5"> กองบริหารงานบุคคล</option>
                                                <option value="6"> กองพัฒนานักศึกษา</option>
                                                <option value="7"> กองศิลปวัฒนธรรม</option>
+                                               <option value="8"> สำนักงานคณะกรรมการมาตรฐานคุณภาพการศึกษา</option>
+                                               <option value="9"> สำนักวิทยบริการและเทคโนโลยีสารสนเทศ</option>
+                                               <option value="10"> สถาบันวิจัยและพัฒนา</option>
+                                               <option value="11"> สถาบันอาเซียนศึกษา</option>
+                                               <option value="12"> ศูนย์คอมพิวเตอร์</option>
+                                               <option value="13"> ศูนย์วิทยาศาสตร์และเทคโนโลยี</option>
+                                               <option value="14"> ศูนย์สหกิจศึกษา</option>
+                                               <option value="15"> ศูนย์บรูณาการงานวิจัยและวิชาการเพื่อรับใช้สังคม</option>
+                                               <option value="16"> หน่วยบ่มเพาะวิสาหกิจ URUBI</option>
+                                               <option value="17"> สวนพฤษศาสตร์โรงเรียน</option>
+                                               <option value="18"> สำนักงานกิจการพิเศษ</option>
+                                               <option value="19"> โรงแรมเรือนต้นสัก</option>
+                                               <option value="20"> สระว่ายน้ำเฉลิมราชภัฏ</option>
+                                               <option value="21"> อุทยานวิทยาศาสตร์ภาคเหนือ มหาวิทยาลัยราชภัฏอุตรดิตถ์</option>
+                                               <option value="22"> ลำรางทุ่งกะโล่</option>
                                            </select>
                                     </div>
                                 <div class="form-group">

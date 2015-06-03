@@ -25,6 +25,13 @@ class user extends CI_Model {
         $num_updates = $this->db->affected_rows();
         return $num_updates;
     }
+    public function DeleteUser($user_id){
+       $this->db->where('user_id',$user_id);
+       $this->db->delete('user');
+       return $this->db->affected_rows();
+        
+    }
+
     public function login(){
         
     }
