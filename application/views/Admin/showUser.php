@@ -44,37 +44,35 @@
                                         }elseif ($value->agency == "7") {
                                             echo "กองศิลปวัฒนธรรม";
                                         }elseif ($value->agency == "8") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "สำนักงานคณะกรรมการมาตรฐานคุณภาพการศึกษา";
                                         }elseif ($value->agency == "9") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "สำนักวิทยบริการและเทคโนโลยีสารสนเทศ";
                                         }elseif ($value->agency == "10") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "สถาบันวิจัยและพัฒนา";
                                         }elseif ($value->agency == "11") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "สถาบันอาเซียนศึกษา";
                                         }elseif ($value->agency == "12") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "ศูนย์คอมพิวเตอร์";
                                         }elseif ($value->agency == "13") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "ศูนย์วิทยาศาสตร์และเทคโนโลยี";
                                         }elseif ($value->agency == "14") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "ศูนย์สหกิจศึกษา";
                                         }elseif ($value->agency == "15") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "ศูนย์บรูณาการงานวิจัยและวิชาการเพื่อรับใช้สังคม";
                                         }elseif ($value->agency == "16") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "หน่วยบ่มเพาะวิสาหกิจ URUBI";
                                         }elseif ($value->agency == "17") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "สวนพฤษศาสตร์โรงเรียน";
                                         }elseif ($value->agency == "18") {
-                                            echo "กองศิลปวัฒนธรรม";
-                                        }elseif ($value->agency == "7") {
-                                            echo "กองศิลปวัฒนธรรม";
-                                        }elseif ($value->agency == "7") {
-                                            echo "กองศิลปวัฒนธรรม";
-                                        }elseif ($value->agency == "7") {
-                                            echo "กองศิลปวัฒนธรรม";
-                                        }elseif ($value->agency == "7") {
-                                            echo "กองศิลปวัฒนธรรม";
-                                        }elseif ($value->agency == "7") {
-                                            echo "กองศิลปวัฒนธรรม";
+                                            echo "สำนักงานกิจการพิเศษ";
+                                        }elseif ($value->agency == "19") {
+                                            echo "โรงแรมเรือนต้นสัก";
+                                        }elseif ($value->agency == "20") {
+                                            echo "สระว่ายน้ำเฉลิมราชภัฏ";
+                                        }elseif ($value->agency == "21") {
+                                            echo "อุทยานวิทยาศาสตร์ภาคเหนือ มหาวิทยาลัยราชภัฏอุตรดิตถ์";
+                                        }else {
+                                            echo "ลำรางทุ่งกะโล่";
                                         }
                                         ?></td>
                                     <td><?php if ($value->status == "1") {

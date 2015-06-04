@@ -15,7 +15,14 @@
                          <form role="form" action="<?php echo base_url(); ?>AdminPanel/AddUser" method="post">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
-                                
+                                <div class="form-group">
+                                    <label>Firstname :</label>
+                                    <input class="form-control" name = "firstname">
+                                </div>
+                                <div class="form-group">
+                                    <label>Lastname :</label>
+                                    <input class="form-control" name = "lastname">
+                                </div>
                                 <div class="form-group">
                                     <label>Username :</label>
                                     <input class="form-control" name = "username">

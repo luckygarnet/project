@@ -87,7 +87,7 @@ class AdminPanel extends CI_Controller {
             show_404();
         }
         redirect('/AdminPanel/showCompositAll');
-    } 
+    }
 
     /**
      * 
@@ -100,7 +100,7 @@ class AdminPanel extends CI_Controller {
         $this->load->model('indicator');
         $this->load->model('composition');
         $query = $this->indicator->getIndicatorById($indicator_id);
-        $result = $query->result();
+        $result = $query->result();        
         $comid = $result[0]->composition_id;
         $composition = $this->composition->getCompositionById($comid);
         $composition = $composition->result();
@@ -143,14 +143,14 @@ class AdminPanel extends CI_Controller {
         $query = $this->indicator->getIndicatorById($indicator_id);
         $result = $query->result();
         $data['indicator'] = $result[0];
-     
+
         $this->load->view('template/header');
-      //  $this->load->view('template/navigationbar');
+        //  $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormAddSubIndicator', $data);
         $this->load->view('template/footer');
-        
     }
+
     /*
      * jirapa/AddSubindicator
      */
@@ -163,36 +163,40 @@ class AdminPanel extends CI_Controller {
         if ($number == 0) {
             show_404();
         }
-        redirect('/AdminPanel/ShowDetailIndicator/'.$data['indicator_id']);
+        redirect('/AdminPanel/ShowDetailIndicator/' . $data['indicator_id']);
     }
-    /*showEditsubindicator*/
-     public function showFormEditsubindicator($subindicator_id){
+
+    /* showEditsubindicator */
+
+    public function showFormEditsubindicator($subindicator_id) {
         $this->load->model('subindicator');
         $this->load->model('indicator');
         $query = $this->subindicator->getSubindicatorById($subindicator_id);
         $result = $query->result();
         $id = $result[0]->indicator_id;
         $indicator = $this->indicator->getIndicatorById($id);
-        $indicator = $indicator->result(); 
-        $data['indicator']= $indicator[0];
+        $indicator = $indicator->result();
+        $data['indicator'] = $indicator[0];
         $data['subindicator'] = $result[0];
-        
+
         $this->load->view('template/header');
-       // $this->load->view('template/navigationbar');
+        // $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
-        $this->load->view('Admin/FormEditSubIndicator',$data);
+        $this->load->view('Admin/FormEditSubIndicator', $data);
         $this->load->view('template/footer');
     }
-    public function Editsubindicator(){
-        $this->load->model('subindicator');    
+
+    public function Editsubindicator() {
+        $this->load->model('subindicator');
         $data['subindicator_id'] = $this->input->post('subindicator_id');
         $data['detail'] = $this->input->post('detail');
         $data['indicator_id'] = $this->input->post('indicator_id');
         $number = $this->subindicator->editSubindicator($data);
-        redirect('/AdminPanel/ShowDetailIndicator/'.$data['indicator_id']);
-
+        redirect('/AdminPanel/ShowDetailIndicator/' . $data['indicator_id']);
     }
- /*showEditsubindicator*/
+
+    /* showEditsubindicator */
+
     /**
      * 
      *
@@ -209,36 +213,38 @@ class AdminPanel extends CI_Controller {
         $comid = $result[0]->composition_id;
         $composition = $this->composition->getCompositionById($comid);
         $composition = $composition->result();
-        /*subindicator*/
+        /* subindicator */
         $subindicator = $this->subindicator->getAllSubindicatorByindicator($result[0]->indicator_id);
         $subindicator = $subindicator->result();
 
-        
+
         $data['composition'] = $composition[0];
         $data['indicator'] = $result[0];
         $data['subindicator'] = $subindicator;
-        $data['indicator_id']=$indicator_id;
-       // print_r($data);
+        $data['indicator_id'] = $indicator_id;
+        // print_r($data);
         $this->load->view('template/header');
-       // $this->load->view('template/navigationbar');
+        // $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/ShowDetailIndicator', $data);
         $this->load->view('template/footer');
     }
+
     public function DeleteIndicator($indicator_id) {
         $this->load->model('indicator');
         $this->indicator->DeleteIndicator($indicator_id);
-        /*$this->load->model('indicator');
-        $indicator_id = $this->input->post('indicator_id');
-        $this->indicator->DeleteIndicator($indicator_id);*/
-       // redirect('/AdminPanel/showCompositAll');
+        /* $this->load->model('indicator');
+          $indicator_id = $this->input->post('indicator_id');
+          $this->indicator->DeleteIndicator($indicator_id); */
+        // redirect('/AdminPanel/showCompositAll');
         echo 'ture';
-        
     }
-    /**$indicator_id
+
+    /*     * $indicator_id
      * For Update Composition 
      * @author  Pisit Nakjai 
      */
+
     public function UpdateComposition() {
         $this->load->model('composition');
         $data['maintitle'] = $this->input->post('maintitle');
@@ -256,14 +262,16 @@ class AdminPanel extends CI_Controller {
             $this->composition->DeleteComposition($id);
         }
     }
-    public function showFormAddUser(){
-        
+
+    public function showFormAddUser() {
+
         $this->load->view('template/header');
-      //  $this->load->view('template/navigationbar');
+        //  $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormAddUser');
         $this->load->view('template/footer');
     }
+
     public function AddUser() {
         $this->load->model('user');
         $data['username'] = $this->input->post('username');
@@ -271,56 +279,57 @@ class AdminPanel extends CI_Controller {
         $data['agency'] = ($this->input->post('agency'));
         $data['status'] = $this->input->post('status');
         $number = $this->user->addUser($data);
-        
+
         redirect('/AdminPanel/showUser');
-        
     }
-    public function showUser(){
-        $this->load->model('user');      
+
+    public function showUser() {
+        $this->load->model('user');
         $query = $this->user->getAllUser();
         $result = $query->result();
-        $data['user'] = $result;       
-        
+        $data['user'] = $result;
+
         $this->load->view('template/header');
-      //  $this->load->view('template/navigationbar');
+        //  $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/showUser', $data);
         $this->load->view('template/footer');
-        
     }
-    public function showFormEditUser($user_id){      
+
+    public function showFormEditUser($user_id) {
         $this->load->model('user');
         $query = $this->user->getUserById($user_id);
-        $result = $query->result();        
+        $result = $query->result();
         $data['user'] = $result[0];
         $this->load->view('template/header');
-     //   $this->load->view('template/navigationbar');
+        //   $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormEditUser', $data);
         $this->load->view('template/footer');
-        
     }
-    public function EditUser(){
+
+    public function EditUser() {
         $this->load->model('user');
         $data['username'] = $this->input->post('username');
         $data['password'] = md5($this->input->post('password'));
-         $data['agency'] = $this->input->post('agency');
+        $data['agency'] = $this->input->post('agency');
         $data['status'] = $this->input->post('status');
-        
+
         $number = $this->user->editUser($data);
         redirect('/AdminPanel/showUser');
     }
-    public function DeleteUser($user_id){
-        $this->load->model('user');
+
+    public function DeleteUser($user_id) {
+        $this->load->model('user');    
+        $data['status'] = $this->input->post('status');
         $this->user->DeleteUser($user_id);
-        echo 'ture';
+        //echo 'ture';
     }
 
-    public function test(){
-       
-     
-        $this->load->view('haeder');   
-       
+    public function test() {
+
+
+        $this->load->view('haeder');
     }
 
     public function login() {
@@ -328,22 +337,21 @@ class AdminPanel extends CI_Controller {
         $this->load->view('login/login');
         $this->load->view('login/footer');
     }
-    
-   /* public function checkLogin(){
-        $this->load->model('user');
-        $data['user_id'] = $this->input->post('user_id');
-        $data['username'] = $this->input->post('username');
-        $data['password'] = $this->input->post('password');
-        $query=  $this->user->login($data);
-        if($query){
-           
-        }  elseif () {
-            
-        }  elseif () {
-            
-        }
-    }*/
 
+    /* public function checkLogin(){
+      $this->load->model('user');
+      $data['user_id'] = $this->input->post('user_id');
+      $data['username'] = $this->input->post('username');
+      $data['password'] = $this->input->post('password');
+      $query=  $this->user->login($data);
+      if($query){
+
+      }  elseif () {
+
+      }  elseif () {
+
+      }
+      } */
 }
 
 ?>
