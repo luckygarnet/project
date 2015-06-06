@@ -288,6 +288,7 @@ class AdminPanel extends CI_Controller {
         $query = $this->user->getAllUser();
         $result = $query->result();
         $data['user'] = $result;
+        
 
         $this->load->view('template/header');
         //  $this->load->view('template/navigationbar');
@@ -307,6 +308,18 @@ class AdminPanel extends CI_Controller {
         $this->load->view('Admin/FormEditUser', $data);
         $this->load->view('template/footer');
     }
+    public function hjg (){
+        
+    }
+    public function updateStatus(){  
+        $this->load->model('user');
+        $user_id = $_POST['user_id'];
+        $data['status'] = $_POST['status'];
+        $this->user->updateStatus($user_id,$data);
+        redirect('/AdminPanel/showUser');
+        
+        
+    }
 
     public function EditUser() {
         $this->load->model('user');
@@ -320,9 +333,11 @@ class AdminPanel extends CI_Controller {
     }
 
     public function DeleteUser($user_id) {
-        $this->load->model('user');    
-        $data['status'] = $this->input->post('status');
+        $this->load->model('user');  
         $this->user->DeleteUser($user_id);
+        print_r($user_id);
+        redirect('/AdminPanel/showUser');
+    
         //echo 'ture';
     }
 

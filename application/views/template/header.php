@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.css');?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css');?>">
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style-responsive.css');?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/themes/toggles.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/themes/toggles-modern.css')?>">
+        
     </head>
     <body>
         <section id="container">            
