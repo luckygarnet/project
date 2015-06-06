@@ -77,13 +77,8 @@
                                             echo "ลำรางทุ่งกะโล่";
                                         }
                                         ?></td>
-                                    <td><?php ?> 
-                                        <form role="form" action="<?php echo base_url(); ?>AdminPanel/updateStaus" method="post">
-                                            <input type="checkbox" <?php if($value->status==1)echo("checked");else echo""?> data-toggle="switch" id=" <?php echo $value->user_id; ?>" name="status"  onchange="update(this);" value="3"  >                                            
-                                        <input type="hidden" name="user_id" value ="<?php echo $value->user_id; ?>"> 
-                                
-                                   
-                                        </form>
+                                    <td><?php ?>                                         
+                                            <input type="checkbox" <?php if($value->status==1)echo("checked");else echo""?> data-toggle="switch" id="<?php echo $value->user_id; ?>" name="status"  onchange="update(this);" value="<?php if($value->status==1)echo("2");else echo"1"?>"  >                  
                                     </td>
                                     <td width="5%">
                             <center>
@@ -111,8 +106,12 @@
         </div>
     </section>
     <script>
-
-        function update(this_a) {
-            alert($(this_a).attr('id'));
-        }
+        function update(this_a) {            
+            $.post('<?php echo base_url("AdminPanel/updateStatus")?>',{user_id:this_a.id,status:this_a.value});
+                
+                if(this_a.value=="1"){$('#'+this_a.id).val("2");}
+                else{$('#'+this_a.id).val("1");}
+                
+            }
+        
     </script>
