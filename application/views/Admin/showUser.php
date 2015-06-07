@@ -109,9 +109,13 @@
         function update(this_a) {            
             $.post('<?php echo base_url("AdminPanel/updateStatus")?>',{user_id:this_a.id,status:this_a.value});
                 
-                if(this_a.value=="1"){$('#'+this_a.id).val("2");}
-                else{$('#'+this_a.id).val("1");}
-                
+                if(this_a.value=="1"){$('#'+this_a.id).val("2");
+                     alert("สถานะของคุณ คือ ใช้งานปกติ");
+                }
+                else{$('#'+this_a.id).val("1");
+                    alert("สถานะของคุณ คือ ถูกระงับใช้งาน");
+                }
+               
             }
         
     </script>
