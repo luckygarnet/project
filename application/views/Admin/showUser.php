@@ -88,7 +88,7 @@
                             </td>
                             <td width="5%">
                             <center>
-                                <a  href ="<?php echo base_url('AdminPanel/DeleteUser/' . $value->user_id); ?>" >
+                                <a  href ="#" onclick="expire(<?php echo $value->user_id; ?>)" >
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button></a> 
                             </center> 
                             </td>
@@ -107,10 +107,11 @@
     </section>
     <script>
         function update(this_a) {            
-            $.post('<?php echo base_url("AdminPanel/updateStatus")?>',{user_id:this_a.id,status:this_a.value});
-                
+            $.post('<?php echo base_url("AdminPanel/updateStatus/")?>'+"/"+this_a.id+"/"+this_a.value);
+                //   alert('<?php echo base_url("AdminPanel/updateStatus/")?>'+"/"+this_a.id+"/"+this_a.value);
                 if(this_a.value=="1"){$('#'+this_a.id).val("2");
                      alert("สถานะของคุณ คือ ใช้งานปกติ");
+                   
                 }
                 else{$('#'+this_a.id).val("1");
                     alert("สถานะของคุณ คือ ถูกระงับใช้งาน");
@@ -118,4 +119,15 @@
                
             }
         
+        function expire(userid){
+            var re = comfirm("คุณต้องการยกเลิกการใช่งานใช่ไหม ?");
+            if(re == true){
+                $.get('<?php echo base_url("AdminPanel/updateStatus/")?>'+"/"+userid+"/0" ,
+                        function(data){
+                            window.location="<?php echo base_url('AdminPanel/showUser/'); ?>";
+                        });
+                //alert('<?php echo base_url("AdminPanel/updateStatus/")?>'+"/"+userid+"/0");
+                       
+            }
+        }
     </script>

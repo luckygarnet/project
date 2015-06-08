@@ -311,10 +311,10 @@ class AdminPanel extends CI_Controller {
     public function hjg (){
         
     }
-    public function updateStatus(){  
+    public function updateStatus($user_id,$status){  
         $this->load->model('user');
-        $user_id = $_POST['user_id'];
-        $data['status'] = $_POST['status'];
+
+        $data['status'] = $status;
         $this->user->updateStatus($user_id,$data);
         redirect('/AdminPanel/showUser');
         
