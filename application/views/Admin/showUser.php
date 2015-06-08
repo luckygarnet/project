@@ -120,7 +120,7 @@
             }
         
         function expire(userid){
-            var re = comfirm("คุณต้องการยกเลิกการใช่งานใช่ไหม ?");
+            var re = confirm("คุณต้องการยกเลิกการใช่งานใช่ไหม ?");
             if(re == true){
                 $.get('<?php echo base_url("AdminPanel/updateStatus/")?>'+"/"+userid+"/0" ,
                         function(data){
