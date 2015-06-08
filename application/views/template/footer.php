@@ -13,12 +13,12 @@
         <div id="ascrail2001" class="nicescroll-rails" style="width: 6px; z-index: 1000; background: rgb(64, 64, 64) none repeat scroll 0% 0%; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 0;"></div>
         <div id="ascrail2001-hr" class="nicescroll-rails" style="height: 6px; z-index: 1000; background: rgb(64, 64, 64) none repeat scroll 0% 0%; position: fixed; left: 0px; width: 100%; bottom: 0px; cursor: default; display: none; opacity: 0;"></div>
         
-    <!-- js placed at the end of the document so the pages load faster -->
-       <script src="<?php echo base_url('assets/js/jquery.js')?>"></script>
-       <script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
-       <script class="include" type="text/javascript" src="<?php echo base_url('assets/js/jquery.dcjqaccordion.2.7.js')?>"></script>
-       <script src="<?php echo base_url('assets/js/jquery.scrollTo.min.js')?>"></script>
-       <script src="<?php echo base_url('assets/js/jquery.nicescroll.js')?>" type="text/javascript"></script>
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="<?php echo base_url('assets/js/jquery.js')?>"></script>
+  <script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
+  <script class="include" type="text/javascript" src="<?php echo base_url('assets/js/jquery.dcjqaccordion.2.7.js')?>"></script>
+  <script src="<?php echo base_url('assets/js/jquery.scrollTo.min.js')?>"></script>
+  <script src="<?php echo base_url('assets/js/jquery.nicescroll.js')?>" type="text/javascript"></script>
 
 
     <!--common script for all pages-->
@@ -31,7 +31,7 @@
         <script src="<?php echo base_url('assets/js/bootstrap-switch.js')?>"></script>
 	
 	<!--custom tagsinput-->
-        <script src="<?php echo base_url('assets/js/jquery.tagsinput.js')?>"></script>
+        <script src="<?php base_url('assets/js/jquery.tagsinput.js')?>"></script>
 	
 	<!--custom checkbox & radio-->
 	
@@ -42,18 +42,4 @@
         <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js')?>"></script>
 	
 	
-        <script src="<?php echo base_url('assets/js/form-component.js')?>"></script>   
-        <script src="<?php echo base_url('assets/js/toggles.js')?>" type="text/javascript"></script>
-        
-        <script>
-//            function test(ele){
-//                var cs1 = $('[type=checkbox]', ele).val();
-//                 console.log(cs1);
-//                    if(cs1 == 'switch'){
-//                        //do something
-//                       
-//                    }
-//            }
-           
-        </script>
-       
+        <script src="<?php base_url('assets/js/form-component.js')?>"></script>  

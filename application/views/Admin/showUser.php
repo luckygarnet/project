@@ -89,7 +89,8 @@
                             <td width="5%">
                             <center>
                                 <a  href ="<?php echo base_url('AdminPanel/DeleteUser/' . $value->user_id); ?>" >
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button></a> 
+                                    
+                                    <button class="btn btn-danger btn-xs" value="3"><i class="fa fa-trash-o "></i></button></a> 
                             </center> 
                             </td>
                             </tr>
@@ -112,10 +113,12 @@
                 if(this_a.value=="1"){$('#'+this_a.id).val("2");
                      alert("สถานะของคุณ คือ ใช้งานปกติ");
                 }
-                else{$('#'+this_a.id).val("1");
+                else if (this_a.value=="2"){$('#'+this_a.id).val("1");
                     alert("สถานะของคุณ คือ ถูกระงับใช้งาน");
                 }
-               
+                else {$('#'+this_a.id).val("3");
+                    alert("สถานะของคุณ คือ ยกเลิกการใช้งาน");
+                }
             }
         
     </script>

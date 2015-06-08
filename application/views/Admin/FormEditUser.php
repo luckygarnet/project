@@ -1,4 +1,4 @@
-<aside></aside>
+
 <section id="main-content">
 <section class="wrapper">
 <div class="col-md-12 mt">

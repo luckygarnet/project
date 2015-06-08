@@ -242,7 +242,7 @@
             $('#titleEdit').val(title);
         }
         function confimdelete(id) {
-            var d = confirm("Are you Sure?");
+            var d = confirm("คุณต้องการลบใช่ไหม?");
             if (d == true) {
                 $.post("<?php echo base_url('AdminPanel/DeleteIndicator/'); ?>/" + id,
                         function (data) {
