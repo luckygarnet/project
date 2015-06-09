@@ -355,9 +355,8 @@ class AdminPanel extends CI_Controller {
     }
     public function AddAgency(){
         $this->load->model('agency');
-       
-        $data2['description'] = $this->input->post('status');
-        $data1['agency'] = $this->input->post('agency');
+        $data['description'] = $this->input->post('status');
+        $this->agency->addAgency($data);
     }
 
     public function test() {

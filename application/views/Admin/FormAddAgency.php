@@ -5,7 +5,7 @@
           		<div class="col-lg-12">
                   <div class="form-panel">
                   	  <h4 class="mb"><i class="fa fa-angle-right"></i> เพิ่มหน่วยงาน</h4> 
-                          <form method="post" class="form-horizontal style-form" action="<?php echo base_url('AdminPanel/AddUser'); ?>">
+                          <form method="post" class="form-horizontal style-form" action="<?php echo base_url('AdminPanel/AddAgency'); ?>">
                           
                          
                             <div class="form-group">
