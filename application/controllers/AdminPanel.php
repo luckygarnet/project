@@ -346,11 +346,18 @@ class AdminPanel extends CI_Controller {
         //echo 'ture';
     }
     public function showFormAddAgency(){
+        
          $this->load->view('template/header');
         //   $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormAddAgency');
         $this->load->view('template/footer');
+    }
+    public function AddAgency(){
+        $this->load->model('agency');
+       
+        $data2['description'] = $this->input->post('status');
+        $data1['agency'] = $this->input->post('agency');
     }
 
     public function test() {
