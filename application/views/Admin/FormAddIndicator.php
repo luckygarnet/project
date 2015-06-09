@@ -35,7 +35,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <table style="height: 300px;">
+                                            <table style="height: 300px; width: 1182px;">
                                                 <tr>
                                                     <td><label>เกณฑ์การประเมิน</label>
                                                         <textarea  class="ckeditor form-control" name = "detail" rows="1">
