@@ -30,7 +30,7 @@ class AdminPanel extends CI_Controller {
         }
 
         $this->load->view('template/header');
-        //$this->load->view('template/navigationbar');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/ShowComposition', $dataJson);
         $this->load->view('template/footer');
@@ -41,7 +41,7 @@ class AdminPanel extends CI_Controller {
      */
     public function ShowFormAddcomposit() {
         $this->load->view('template/header');
-        //$this->load->view('template/navigationbar');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormAddComposit');
         $this->load->view('template/footer');
@@ -58,7 +58,7 @@ class AdminPanel extends CI_Controller {
 
 
         $this->load->view('template/header');
-        //$this->load->view('template/navigationbar');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormAddIndicator', $data);
         $this->load->view('template/footer');
@@ -108,7 +108,7 @@ class AdminPanel extends CI_Controller {
         $data['indicator'] = $result[0];
 
         $this->load->view('template/header');
-        //$this->load->view('template/navigationbar');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormEditIndicator', $data);
         $this->load->view('template/footer');
@@ -145,7 +145,7 @@ class AdminPanel extends CI_Controller {
         $data['indicator'] = $result[0];
 
         $this->load->view('template/header');
-        //  $this->load->view('template/navigationbar');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormAddSubIndicator', $data);
         $this->load->view('template/footer');
@@ -180,7 +180,7 @@ class AdminPanel extends CI_Controller {
         $data['subindicator'] = $result[0];
 
         $this->load->view('template/header');
-        // $this->load->view('template/navigationbar');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormEditSubIndicator', $data);
         $this->load->view('template/footer');
@@ -224,7 +224,7 @@ class AdminPanel extends CI_Controller {
         $data['indicator_id'] = $indicator_id;
         // print_r($data);
         $this->load->view('template/header');
-        // $this->load->view('template/navigationbar');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/ShowDetailIndicator', $data);
         $this->load->view('template/footer');
@@ -264,9 +264,8 @@ class AdminPanel extends CI_Controller {
     }
 
     public function showFormAddUser() {
-
         $this->load->view('template/header');
-        //  $this->load->view('template/navigationbar');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormAddUser');
         $this->load->view('template/footer');
@@ -280,8 +279,7 @@ class AdminPanel extends CI_Controller {
         $data1['agency_id'] = $this->input->post('agency_id');
         $data1['status'] = $this->input->post('status');
         $data2['description'] = $this->input->post('status');
-        $data1['agency'] = $this->input->post('agency');
-        
+        $data1['agency'] = $this->input->post('agency');        
         
         $this->user->addUser($data1);
         $this->agency->addAgency($data2);
@@ -292,11 +290,10 @@ class AdminPanel extends CI_Controller {
         $this->load->model('user');
         $query = $this->user->selectStatus();
         $result = $query->result();
-        $data['user'] = $result;
-        
+        $data['user'] = $result;        
 
         $this->load->view('template/header');
-        //  $this->load->view('template/navigationbar');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/showUser', $data);
         $this->load->view('template/footer');
@@ -308,7 +305,7 @@ class AdminPanel extends CI_Controller {
         $result = $query->result();
         $data['user'] = $result[0];
         $this->load->view('template/header');
-        //   $this->load->view('template/navigationbar');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormEditUser', $data);
         $this->load->view('template/footer');
@@ -345,10 +342,9 @@ class AdminPanel extends CI_Controller {
     
         //echo 'ture';
     }
-    public function showFormAddAgency(){
-        
-         $this->load->view('template/header');
-        //   $this->load->view('template/navigationbar');
+    public function showFormAddAgency(){        
+        $this->load->view('template/header');
+        $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
         $this->load->view('Admin/FormAddAgency');
         $this->load->view('template/footer');
