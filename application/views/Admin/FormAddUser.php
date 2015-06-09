@@ -12,17 +12,14 @@
                 <div class="panel panel-default">                  
                     <div class="panel-heading">  เพิ่มผู้ใช้งาน </div>
                     <div class="panel-body">
-                         <form role="form" action="<?php echo base_url(); ?>AdminPanel/AddUser" method="post">
+                         <form role="form" action="<?php echo base_url('AdminPanel/AddUser'); ?>" method="post">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
                                 <div class="form-group">
-                                    <label>Firstname :</label>
-                                    <input class="form-control" name = "firstname">
+                                    <label>ชื่อ-นามสกุล :</label>
+                                    <input class="form-control" name = "description">
                                 </div>
-                                <div class="form-group">
-                                    <label>Lastname :</label>
-                                    <input class="form-control" name = "lastname">
-                                </div>
+                               
                                 <div class="form-group">
                                     <label>Username :</label>
                                     <input class="form-control" name = "username">

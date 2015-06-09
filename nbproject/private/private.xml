@@ -6,9 +6,7 @@
             <file>file:/C:/xampp/htdocs/SAR/application/views/template/header.php</file>
             <file>file:/C:/xampp/htdocs/SAR/application/views/Admin/showUser.php</file>
             <file>file:/C:/xampp/htdocs/SAR/application/views/template/footer.php</file>
-            <file>file:/C:/xampp/htdocs/SAR/application/views/Admin/FormAddUser.php</file>
-            <file>file:/C:/xampp/htdocs/SAR/system/database/DB_active_rec.php</file>
-            <file>file:/C:/xampp/htdocs/SAR/application/views/Admin/FormEditUser.php</file>
+            <file>file:/C:/xampp/htdocs/SAR/application/views/Admin/ShowComposition.php</file>
             <file>file:/C:/xampp/htdocs/SAR/application/controllers/AdminPanel.php</file>
             <file>file:/C:/xampp/htdocs/SAR/application/models/user.php</file>
         </group>

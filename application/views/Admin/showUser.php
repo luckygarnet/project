@@ -1,4 +1,3 @@
-<aside></aside>
 <section id="main-content">
     <section class="wrapper">
         <div class="col-md-12 mt">
@@ -25,7 +24,7 @@
                                 //print_r($value);
                                 $i++;
                                 ?>
-                            <?php echo $value->status;?>
+                          
                                 <tr>
                                     <td><?php echo $i; ?></a></td>
                                     <td class="hidden-phone"><?php echo $value->username; ?></td>
@@ -36,7 +35,7 @@
                                         } elseif ($value->agency == "2") {
                                             echo "กองกลาง";
                                         } elseif ($value->agency == "3") {
-                                            echo "กองนโยบาลและแผน";
+                                            echo "กองนโยบายและแผน";
                                         } elseif ($value->agency == "4") {
                                             echo "กองบริการการศึกษา";
                                         } elseif ($value->agency == "5") {

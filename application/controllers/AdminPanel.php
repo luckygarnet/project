@@ -274,18 +274,23 @@ class AdminPanel extends CI_Controller {
 
     public function AddUser() {
         $this->load->model('user');
-        $data['username'] = $this->input->post('username');
-        $data['password'] = md5($this->input->post('password'));
-        $data['agency'] = ($this->input->post('agency'));
-        $data['status'] = $this->input->post('status');
-        $number = $this->user->addUser($data);
-
+        $this->load->model('agency');
+        $data1['username'] = $this->input->post('username');
+        $data1['password'] = md5($this->input->post('password'));
+        $data1['agency_id'] = $this->input->post('agency_id');
+        $data1['status'] = $this->input->post('status');
+        $data2['description'] = $this->input->post('status');
+        $data1['agency'] = $this->input->post('agency');
+        
+        
+        $this->user->addUser($data1);
+        $this->agency->addAgency($data2);
         redirect('/AdminPanel/showUser');
     }
 
     public function showUser() {
         $this->load->model('user');
-        $query = $this->user->getAllUser();
+        $query = $this->user->selectStatus();
         $result = $query->result();
         $data['user'] = $result;
         
@@ -339,6 +344,13 @@ class AdminPanel extends CI_Controller {
         redirect('/AdminPanel/showUser');
     
         //echo 'ture';
+    }
+    public function showFormAddAgency(){
+         $this->load->view('template/header');
+        //   $this->load->view('template/navigationbar');
+        $this->load->view('template/sidebar');
+        $this->load->view('Admin/FormAddAgency');
+        $this->load->view('template/footer');
     }
 
     public function test() {

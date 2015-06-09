@@ -6,8 +6,9 @@ class user extends CI_Model {
         parent::__construct();
     }
 
-    public function addUser($data) {
-        $this->db->insert('user', $data);
+    public function addUser($data1) {
+        $this->db->insert('user', $data1);
+        //$this->db->insert('agency',$data);
     }
 
     public function getUserById($user_id) {
@@ -39,6 +40,12 @@ class user extends CI_Model {
         $this->db->update('user',$data);
         $num_updates = $this->db->affected_rows();
         return $num_updates;
+    }
+
+    public function selectStatus(){
+       //$query = $this->db->get('user');
+       $query = $this->db->get_where('user','status !=0') ;
+        return $query;
     }
 
     public function login() {
