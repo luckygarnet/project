@@ -1,3 +1,4 @@
+<aside></aside>
     <section id="main-content">
         <section class="wrapper">                            
             <div class="col-md-12 mt">
@@ -11,14 +12,17 @@
                 <div class="panel panel-default">                  
                     <div class="panel-heading">  หน่วยงานภายใน</div>
                     <div class="panel-body">
-                         <form role="form" action="<?php echo base_url('AdminPanel/AddAgencny'); ?>" method="post">
+                         <form role="form" action="<?php echo base_url('AdminPanel/EditAgency'); ?>" method="post">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
                                 <div class="form-group">
                                     <label>หน่วยงานภายใน :</label>
-                                    <input class="form-control" name = "description">
+                                    <input class="form-control" name = "description" value="<?php echo $agency->description; ?>">
                                 </div>
+                                 <div class="form-group">
+                                        <input type="hidden" name="agencny_id" value ="<?php echo $agency->agency_id; ?>"> 
                                 
+                                    </div>
                                     
                             <button type="submit" class="btn btn-default right">Submit Button</button>
                             <button type="reset" class="btn btn-default right">Reset Button</button>
@@ -42,3 +46,4 @@
 <script type="text/javascript" src="<?php echo base_url("assets/ckeditor/ckeditor.js"); ?>"></script>
 
          
+       

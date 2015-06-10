@@ -7,37 +7,37 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                  <p class="centered"><a href="profile.html"><img src="<?php echo base_url('assets/img/ui-sam.jpg');?>" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">Marcel Newman</h5>
               	  	
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a class="active" href="<?php echo base_url('index.php/AdminPanel/showCompositAll');?>">
                           <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
+                          <span>ฐานข้อมูลการประเมิน</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
-                          <span>UI Elements</span>
+                          <span>จัดการผู้ใช้งาน</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="general.html">General</a></li>
-                          <li><a  href="buttons.html">Buttons</a></li>
-                          <li><a  href="panels.html">Panels</a></li>
+                          <li><a href="<?php echo base_url('index.php/AdminPanel/showUser');?>">แสดงผู้ใช้งานทั้งหมด</a></li>
+                          <li><a href="<?php echo base_url('index.php/AdminPanel/showFormAddUser');?>">เพิ่มผู้ใช้งาน</a></li>
+                                             
                       </ul>
                   </li>
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-cogs"></i>
-                          <span>Components</span>
+                          <span>การจัดการหน่วยงาน</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="calendar.html">Calendar</a></li>
-                          <li><a  href="gallery.html">Gallery</a></li>
-                          <li><a  href="todo_list.html">Todo List</a></li>
+                          <li><a  href="<?php echo base_url('index.php/AdminPanel/showAgency');?>">แสดงหน่วยงานทั้งหมด</a></li>
+                          <li><a  href="<?php echo base_url('index.php/AdminPanel/showFormAddAgency');?>">เพิ่มหน่วยงาน</a></li>                         
+                          
                       </ul>
                   </li>
                   <li class="sub-menu">
