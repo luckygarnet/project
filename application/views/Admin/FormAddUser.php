@@ -47,7 +47,10 @@
                                                <option value="2"> ถูกระงับการใช้งาน</option>
                                            </select>
                                     </div>
-                                    
+                                     <div class="form-group">
+                                         <input type="text" name="agency_id" value ="<?php echo $agency->agency_id; ?>"> 
+                                
+                                    </div>
                             <button type="submit" class="btn btn-default right">Submit Button</button>
                             <button type="reset" class="btn btn-default right">Reset Button</button>
                             </div>

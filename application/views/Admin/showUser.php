@@ -26,10 +26,10 @@
                                 ?>
                           
                                 <tr>
-                                    <td><?php echo $i; ?></a></td>
+                                    <td style="width:"><?php echo $i; ?></a></td>
                                     <td class="hidden-phone"><?php echo $value->username; ?></td>
                                     <td><?php echo $value->password; ?> </td>
-                                    <td><?php echo $value->agency_id; ?></td>
+                                    <td><?php if($value->agency_id==$agency->agency_id){echo $agency->description;} ?></td>
                                     <td><?php ?>                                         
                                             <input type="checkbox" <?php if($value->status==1)echo("checked");else echo""?> data-toggle="switch" id="<?php echo $value->user_id; ?>" name="status"  onchange="update(this);" value="<?php if($value->status==1)echo("2");else echo"1"?>"  >                  
                                     </td>

@@ -284,6 +284,7 @@ class AdminPanel extends CI_Controller {
         $data1['username'] = $this->input->post('username');
         $data1['password'] = md5($this->input->post('password'));
         $data1['status'] = $this->input->post('status');
+        $data1['agency_id'] = $this->input->post('agency_id');
         $data2['description'] = $this->input->post('status');
          
         
@@ -294,9 +295,14 @@ class AdminPanel extends CI_Controller {
 
     public function showUser() {
         $this->load->model('user');
+        $this->load->model('agency');
         $query = $this->user->selectStatus();
         $result = $query->result();
-        $data['user'] = $result;        
+        $data['user'] = $result;  
+        $agencyid = $result[0]->agency_id;
+        $agency = $this->agency->getAgencyById($agencyid);
+        $agency = $agency->result();
+        $data['agency'] = $agency[0];
 
         $this->load->view('template/header');
         $this->load->view('template/navigationbar');
