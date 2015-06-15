@@ -387,7 +387,6 @@ class AdminPanel extends CI_Controller {
     public function EditAgency() {
         $this->load->model('agency');
         $data['description'] = $this->input->post('description');
-        $data['agency_id'] = $this->input->post('agencny_id');
         $this->agency->editAgency($data);
 //        print_r($data);
         redirect('/AdminPanel/showagency');

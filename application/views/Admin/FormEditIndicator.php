@@ -33,14 +33,18 @@
                                 <label>ชนิดของตัวบ่งชี้ :</label>
                                 <input class="form-control" name = "type" value="<?php  echo $indicator->indicator_type;?>">
                             </div>
-                            <div class="form-group">
-                                <label>เกณฑ์การประเมิน</label>
-                                <textarea  class="ckeditor form-control" name = "detail" rows="3">
-                                <?php echo $indicator->detail;?>
-                                </textarea>
-                                <div id="txtEditor"></div>
-
-                            </div>
+                             <div class="form-group">
+                                            <table style="height: 300px; width: 1182px;">
+                                                <tr>
+                                                    <td><label>เกณฑ์การประเมิน</label>
+                                                        <textarea  class="ckeditor form-control" name = "detail" rows="1">
+                                                         <?php echo $indicator->detail;?>
+                                                        </textarea>
+                                                        <div id="txtEditor"></div></td>
+                                                </tr>
+                                            </table>
+                             </div>
+                          
                             <div class="form-group">
                                 <label>เกณฑ์มาตรฐาน :</label>
                                 <select class="form-control" id="citeria" name="citeria">
