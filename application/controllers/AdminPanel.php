@@ -313,6 +313,14 @@ class AdminPanel extends CI_Controller {
         $this->load->view('Admin/showUser', $data);
         $this->load->view('template/footer');
     }
+    public function updateStatus($user_id,$status){  
+        $this->load->model('user');
+        $data['status'] = $status;
+        $this->user->updateStatus($user_id,$data);
+        redirect('/AdminPanel/showUser');
+        
+        
+    }
 
     public function showFormEditUser($user_id) {
         $this->load->model('user');
@@ -328,16 +336,6 @@ class AdminPanel extends CI_Controller {
         $this->load->view('template/footer');
     }
     
-    public function updateStatus($user_id,$status){  
-        $this->load->model('user');
-
-        $data['status'] = $status;
-        $this->user->updateStatus($user_id,$data);
-        redirect('/AdminPanel/showUser');
-        
-        
-    }
-
     public function EditUser() {
         $this->load->model('user');
         $this->load->model('agency');
@@ -366,13 +364,33 @@ class AdminPanel extends CI_Controller {
         $this->load->view('template/footer');
     }
     public function AddAgency(){
-        $this->load->model('agency');
-        //$data['agency_id'] = $this->input->post('agency_id');
+        $this->load->model('agency');        
         $data['description'] = $this->input->post('description');
         print_r($data);
         $this->agency->addAgency($data);
         //print_r($data);
         redirect('/AdminPanel/showAgency');
+    }
+        public function showFormEditAgency($agency_id) {
+        $this->load->model('agency');
+        $query = $this->agency->getAgencyById($agency_id);
+        $result = $query->result();
+        $data['agency'] = $result[0];
+//        print_r($data);
+        $this->load->view('template/header');
+        $this->load->view('template/navigationbar');
+        $this->load->view('template/sidebar');
+        $this->load->view('Admin/showFormEditAgency', $data);
+        $this->load->view('template/footer');
+    }
+    
+    public function EditAgency() {
+        $this->load->model('agency');
+        $data['description'] = $this->input->post('description');
+        $data['agency_id'] = $this->input->post('agencny_id');
+        $this->agency->editAgency($data);
+//        print_r($data);
+        redirect('/AdminPanel/showagency');
     }
     public function showAgency(){
          $this->load->model('agency');
@@ -387,25 +405,8 @@ class AdminPanel extends CI_Controller {
         $this->load->view('template/footer');
     }
     
-     public function showFormEditAgency($agency_id) {
-        $this->load->model('agency');
-        $query = $this->agency->getAgencyById($agency_id);
-        $result = $query->result();
-        $data['agency'] = $result[0];
-        $this->load->view('template/header');
-        $this->load->view('template/navigationbar');
-        $this->load->view('template/sidebar');
-        $this->load->view('Admin/showFormEditAgency', $data);
-        $this->load->view('template/footer');
-    }
-    public function EditAgency() {
-        $this->load->model('agency');
-        $data['description'] = $this->input->post('description');
-        $number = $this->agency->editAgency($data);
-        redirect('/AdminPanel/showAgency');
-    }
     public function DeleteAgency($agency_id){
-         $this->load->model('agency');  
+        $this->load->model('agency');  
         $this->agency->DeleteAgency($agency_id);
        // print_r($user_id);
         redirect('/AdminPanel/showAgency');

@@ -20,7 +20,7 @@
                                     <input class="form-control" name = "description" value="<?php echo $agency->description; ?>">
                                 </div>
                                  <div class="form-group">
-                                        <input type="hidden" name="agencny_id" value ="<?php echo $agency->agency_id; ?>"> 
+                                     <input type="hidden" name="agency_id" value ="<?php echo $agency->agency_id; ?>"> 
                                 
                                     </div>
                                     

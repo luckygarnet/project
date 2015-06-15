@@ -5,32 +5,32 @@
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
+              <ul class="sidebar-menu active" id="nav-accordion">
               
                   <p class="centered"><a href="profile.html"><img src="<?php echo base_url('assets/img/ui-sam.jpg');?>" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">Marcel Newman</h5>
               	  	
-                  <li class="mt">
-                      <a class="active" href="<?php echo base_url('index.php/AdminPanel/showCompositAll');?>">
+                  <li class="mt ">
+                      <a  href="<?php echo base_url('index.php/AdminPanel/showCompositAll');?>">
                           <i class="fa fa-dashboard"></i>
                           <span>ฐานข้อมูลการประเมิน</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="" >
                           <i class="fa fa-desktop"></i>
                           <span>จัดการผู้ใช้งาน</span>
                       </a>
                       <ul class="sub">
-                          <li><a href="<?php echo base_url('index.php/AdminPanel/showUser');?>">แสดงผู้ใช้งานทั้งหมด</a></li>
+                          <li ><a href="<?php echo base_url('index.php/AdminPanel/showUser');?>">แสดงผู้ใช้งานทั้งหมด</a></li>
                           <li><a href="<?php echo base_url('index.php/AdminPanel/showFormAddUser');?>">เพิ่มผู้ใช้งาน</a></li>
                                              
                       </ul>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="" >
                           <i class="fa fa-cogs"></i>
                           <span>การจัดการหน่วยงาน</span>
                       </a>
@@ -85,4 +85,6 @@
               <!-- sidebar menu end-->
           </div>
       </aside>
+      
       <!--sidebar end-->
+

@@ -8,7 +8,7 @@
                         <thead>
                             <tr>
                                 <th width="5%" > # </th>
-                                <th width="20%"><i class="fa fa-bookmark"></i> Agency</th>
+                                <th width="30%"><i class="fa fa-bookmark"></i> Agency</th>
                                 <th></th>
                             </tr>
                         </thead>
