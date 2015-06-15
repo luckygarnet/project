@@ -13,14 +13,14 @@
                   <li class="mt ">
                       <a  href="<?php echo base_url('index.php/AdminPanel/showCompositAll');?>">
                           <i class="fa fa-dashboard"></i>
-                          <span>ฐานข้อมูลการประเมิน</span>
+                          <span>การจัดการข้อมูลการประเมิน</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
                       <a href="" >
                           <i class="fa fa-desktop"></i>
-                          <span>จัดการผู้ใช้งาน</span>
+                          <span>การจัดการข้อมูลผู้ใช้งาน</span>
                       </a>
                       <ul class="sub">
                           <li ><a href="<?php echo base_url('index.php/AdminPanel/showUser');?>">แสดงผู้ใช้งานทั้งหมด</a></li>
@@ -32,7 +32,7 @@
                   <li class="sub-menu">
                       <a href="" >
                           <i class="fa fa-cogs"></i>
-                          <span>การจัดการหน่วยงาน</span>
+                          <span>การจัดการข้อมูลหน่วยงาน</span>
                       </a>
                       <ul class="sub">
                           <li><a  href="<?php echo base_url('index.php/AdminPanel/showAgency');?>">แสดงหน่วยงานทั้งหมด</a></li>
