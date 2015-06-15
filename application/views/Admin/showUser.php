@@ -8,10 +8,11 @@
                         <thead>
                             <tr>
                                 <th width="5%" > # </th>
+                                <th width="10%"><i class="fa fa-bullhorn"></i> Descrition </th>       
                                 <th width="10%" class="hidden-phone"><i class="fa fa-question-circle"></i> Username</th>
-                                <th width="30%"><i class="fa fa-bookmark"></i> PassWord</th>
-                                <th width="20%"><i class="fa fa-bookmark"></i> Agency</th>
-                                <th width="20%"><i class=" fa fa-edit"></i> Status</th>
+                                <th width="20%"><i class="fa fa-bookmark"></i> PassWord</th>
+                                <th width="15%"><i class="fa fa-bookmark"></i> Agency</th>
+                                <th width="10%"><i class=" fa fa-edit"></i> Status</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -27,6 +28,7 @@
                           
                                 <tr>
                                     <td style="width:"><?php echo $i; ?></a></td>
+                                    <td class="hidden-phone"><?php echo $value->name; ?></td>
                                     <td class="hidden-phone"><?php echo $value->username; ?></td>
                                     <td><?php echo $value->password; ?> </td>
                                     <td><?php if($value->agency_id==$agency->agency_id){echo $agency->description;} ?></td>

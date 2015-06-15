@@ -15,7 +15,7 @@
                                     <form role="form" action="<?php echo base_url(); ?>AdminController/AddIndicator" method="post">
                                         <div class="form-group">
                                             <label>ใช้กับ</label>
-                                            <select class="form-control" name = "used">
+                                            <select class="form-control" name = "data_use">
                                                 <option value="1"> ปีการศึกษา</option>
                                                 <option value="2"> ปีงบประมาณ</option>
                                                 <option value="3"> ปีปฏิทิน</option>
@@ -46,9 +46,9 @@
 
 
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" >
                                             <label>เกณฑ์มาตรฐาน :</label>
-                                            <select class="form-control">
+                                            <select class="form-control" name = "citeria">
                                                 <option value="1">ข้อ</option>
                                                 <option value="2">เชิงปริมาณ</option>
                                             </select>

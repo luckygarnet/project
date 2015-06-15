@@ -9,7 +9,10 @@
             <file>file:/C:/xampp/htdocs/SAR/application/views/Admin/FormAddUser.php</file>
             <file>file:/C:/xampp/htdocs/SAR/application/views/Admin/FormEditUser.php</file>
             <file>file:/C:/xampp/htdocs/SAR/application/controllers/AdminPanel.php</file>
+            <file>file:/C:/xampp/htdocs/SAR/application/views/Admin/FormAddIndicator.php</file>
+            <file>file:/C:/xampp/htdocs/SAR/application/models/composition.php</file>
             <file>file:/C:/xampp/htdocs/SAR/application/models/user.php</file>
+            <file>file:/C:/xampp/htdocs/SAR/application/views/Admin/FormEditIndicator.php</file>
         </group>
     </open-files>
 </project-private>

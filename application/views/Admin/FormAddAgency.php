@@ -11,7 +11,7 @@
                 <div class="panel panel-default">                  
                     <div class="panel-heading">  หน่วยงานภายใน</div>
                     <div class="panel-body">
-                         <form role="form" action="<?php echo base_url('AdminPanel/AddAgencny'); ?>" method="post">
+                         <form role="form" action="<?php echo base_url('AdminPanel/AddAgency'); ?>" method="post">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
                                 <div class="form-group">

@@ -16,7 +16,7 @@
                             <div class="col-md-6 col-md-offset-3">
                                 <div class="form-group">
                                     <label>ชื่อ-นามสกุล :</label>
-                                    <input class="form-control" name = "description">
+                                    <input class="form-control" name = "name">
                                 </div>
                                
                                 <div class="form-group">
@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="form-group">
                                        <label>หน่วยงานภายในมหาวิทยาลัย</label>
-                                           <?php echo "<select class='form-control' name ='agency' >";
+                                           <?php echo "<select class='form-control' name ='agency' id='agency'>";
                                                  echo " <option value=''>เลือกหน่วยงาน</option>";
                                                     if(count($agency_id)){
                                                     foreach ($agency_id as $value){
@@ -47,10 +47,7 @@
                                                <option value="2"> ถูกระงับการใช้งาน</option>
                                            </select>
                                     </div>
-                                     <div class="form-group">
-                                         <input type="text" name="agency_id" value ="<?php echo $agency->agency_id; ?>"> 
-                                
-                                    </div>
+                                     
                             <button type="submit" class="btn btn-default right">Submit Button</button>
                             <button type="reset" class="btn btn-default right">Reset Button</button>
                             </div>

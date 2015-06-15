@@ -267,9 +267,12 @@ class AdminPanel extends CI_Controller {
     }
 
     public function showFormAddUser() {
-         $this->load->model('agency');
-         $data = array('agency_id' => $this->agency->showagency()); 
-      
+        $this->load->model('agency');
+        $data = array('agency_id' => $this->agency->showagency());
+       // $query = $this->agency->getAgencyById($agency_id);
+       // $result = $query->result();
+       // $data['agency'] = $result[0];
+
         $this->load->view('template/header');
         $this->load->view('template/navigationbar');
         $this->load->view('template/sidebar');
@@ -281,16 +284,16 @@ class AdminPanel extends CI_Controller {
     public function AddUser() {
         $this->load->model('user');
         $this->load->model('agency');
+        $data1['name'] = $this->input->post('name');
         $data1['username'] = $this->input->post('username');
         $data1['password'] = md5($this->input->post('password'));
         $data1['status'] = $this->input->post('status');
-        $data1['agency_id'] = $this->input->post('agency_id');
-        $data2['description'] = $this->input->post('status');
-         
-        
+        $data1['agency_id'] = $this->input->post('agency');
+
         $this->user->addUser($data1);
-        $this->agency->addAgency($data2);
+
         redirect('/AdminPanel/showUser');
+//        print_r($data1);
     }
 
     public function showUser() {
@@ -313,6 +316,8 @@ class AdminPanel extends CI_Controller {
 
     public function showFormEditUser($user_id) {
         $this->load->model('user');
+        $this->load->model('agency');
+        $data = array('agency_id' => $this->agency->showagency());
         $query = $this->user->getUserById($user_id);
         $result = $query->result();
         $data['user'] = $result[0];
@@ -322,9 +327,7 @@ class AdminPanel extends CI_Controller {
         $this->load->view('Admin/FormEditUser', $data);
         $this->load->view('template/footer');
     }
-    public function hjg (){
-        
-    }
+    
     public function updateStatus($user_id,$status){  
         $this->load->model('user');
 
@@ -337,9 +340,10 @@ class AdminPanel extends CI_Controller {
 
     public function EditUser() {
         $this->load->model('user');
+        $this->load->model('agency');
+        $data['name'] = $this->input->post('name');
         $data['username'] = $this->input->post('username');
-        $data['password'] = md5($this->input->post('password'));
-        $data['agency'] = $this->input->post('agency');
+        $data['agency_id'] = $this->input->post('agency');
         $data['status'] = $this->input->post('status');
 
         $number = $this->user->editUser($data);
