@@ -8,7 +8,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>การจัดการข้อมูลสำหรับการประกันคุณภาพการศึกษาระดับคณะ</b></a>
+            <a href="index.html" class="logo" style="color: #000;"><b>การจัดการข้อมูลสำหรับการประกันคุณภาพการศึกษาระดับคณะ</b></a>
             <!--logo end-->
             
             <div class="top-menu">

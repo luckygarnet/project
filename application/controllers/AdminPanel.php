@@ -302,10 +302,14 @@ class AdminPanel extends CI_Controller {
         $query = $this->user->selectStatus();
         $result = $query->result();
         $data['user'] = $result;  
-        $agencyid = $result[0]->agency_id;
-        $agency = $this->agency->getAgencyById($agencyid);
+        
+        foreach ($result as $valueUser)
+        {
+        $agency = $this->agency->getAgencyById($valueUser->agency_id);
         $agency = $agency->result();
-        $data['agency'] = $agency[0];
+        $data['agency'][$valueUser->user_id]= $agency[0];
+        }
+        
 
         $this->load->view('template/header');
         $this->load->view('template/navigationbar');
@@ -410,9 +414,63 @@ class AdminPanel extends CI_Controller {
        // print_r($user_id);
         redirect('/AdminPanel/showAgency');
     }
- 
-   
+    
+    public function showFormAddCommittee() {
+        $this->load->view('template/header');
+        $this->load->view('template/navigationbar');
+        $this->load->view('template/sidebar');
+        $this->load->view('Admin/FormAddCommittee');
+     //   $this->load->view('Admin/FormAddUser');
+        $this->load->view('template/footer');
+    }
+    public function AddCommittee(){
+        $this->load->model('committee');        
+        $data['name'] = $this->input->post('name');
+        $data['password'] = md5($this->input->post('password'));
+        $data['status'] = $this->input->post('status');
+        
+        $this->committee->addCommittee($data);
+        redirect('/AdminPanel/showCommittee');
+    }
+    public function showCommittee(){
+         $this->load->model('committee');
+        $query = $this->committee->selectStatus();
+        $result = $query->result();
+        $data['committee'] = $result;        
 
+        $this->load->view('template/header');
+        $this->load->view('template/navigationbar');
+        $this->load->view('template/sidebar');
+        $this->load->view('Admin/showCommittee', $data);
+        $this->load->view('template/footer');
+    }
+     public function updateStatusCommittee($committee_id,$status){  
+        $this->load->model('committee');
+        $data['status'] = $status;
+        $this->committee->updateStatus($committee_id,$data);
+        redirect('/AdminPanel/showCommittee');
+        
+        
+    }
+     public function showFormEditCommittee($committee_id) {
+        $this->load->model('committee');
+        $query = $this->committee->getCommitteeById($committee_id);
+        $result = $query->result();
+        $data['committee'] = $result[0];
+        $this->load->view('template/header');
+        $this->load->view('template/navigationbar');
+        $this->load->view('template/sidebar');
+        $this->load->view('Admin/FormEditCommittee', $data);
+        $this->load->view('template/footer');
+    }
+     public function EditCommittee() {
+        $this->load->model('committee');
+        $data['name'] = $this->input->post('name');
+        $data['password'] = $this->input->post('password');
+        $data['status'] = $this->input->post('status');
+        $this->committee->editCommittee($data);
+        redirect('/AdminPanel/showCommittee');
+    }
     public function test() {
 
 

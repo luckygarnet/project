@@ -39,7 +39,18 @@
                           <li><a  href="<?php echo base_url('index.php/AdminPanel/showFormAddAgency');?>">เพิ่มหน่วยงาน</a></li>                         
                           
                       </ul>
-                  </li>                
+                  </li>    
+                  <li class="sub-menu">
+                      <a href="" >
+                          <i class="fa fa-cogs"></i>
+                          <span>การจัดการข้อมูลกรรมการ</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="<?php echo base_url('index.php/AdminPanel/showCommittee');?>">แสดงรายชื่อคณะกรรมการ</a></li>
+                          <li><a  href="<?php echo base_url('index.php/AdminPanel/showFormAddCommittee');?>">เพิ่มคณะกรรมการ</a></li>                         
+                          
+                      </ul>
+                  </li>  
 
               </ul>
               <!-- sidebar menu end-->
